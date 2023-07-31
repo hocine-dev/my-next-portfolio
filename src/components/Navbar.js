@@ -261,7 +261,7 @@ const Navbar = () => {
             <Image src={fiverrIcon} alt="fiverr" style={{ scale: "2.5" }} />
           </motion.a>
           <motion.a
-            href="https://web.whatsapp.com/send?phone=16145059642"
+            href="https://wa.me/16145059642"
             target="_blank"
             whileHover={{ y: -2 }}
             className="w-6 m-3"

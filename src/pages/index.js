@@ -9,10 +9,14 @@ import Link from "next/link";
 import HomeStyle from "../styles/Home.module.css";
 import TransitionEffect from "@/components/TransitionEffect";
 import BackToTop from "@/components/BackToTop";
+import { useState,useEffect } from "react";
 
 
 export default function Home() {
-  
+  const [IsMobile,setIsMobile] = useState(false);
+
+useEffect(()=>{(typeof window !== 'undefined') ?setIsMobile(window.navigator.userAgentData
+  .mobile):null},[])
   return (
     <>
       <Head>
@@ -61,7 +65,7 @@ export default function Home() {
                   <span style={{ fontSize: 30, paddingLeft: 5 }}>&#8595;</span>
                 </Link>
                 <Link
-                  href="https://wa.me/16145059642"
+                  href={IsMobile?"https://wa.me/16145059642":"https://web.whatsapp.com/send?phone=16145059642"}
                   target="blank"
                   className={`xs:!text-sm xs:px-1 hover:dark:border-light hover:dark:bg-dark hover:dark:text-light flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold
                   hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark`}
