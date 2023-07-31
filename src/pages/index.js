@@ -12,6 +12,9 @@ import BackToTop from "@/components/BackToTop";
 
 
 export default function Home() {
+  const headersList = headers();
+  const userAgent = headersList.get('user-agent');
+
   return (
     <>
       <Head>
@@ -46,7 +49,7 @@ export default function Home() {
               <p className="my-4 text-base font-medium !text-left xs:px-3">
                 I Am A Full Stack Web Developer<br></br>I Am Working As A
                 Freelancer<br></br>
-                Don&apos;t Hesitate To Contact Me If You Need Any Help.
+                Don&apos;t Hesitate To Contact Me If You Need Any Help.{userAgent}
               </p>
               <div className="flex items-center  mt-2 w-full justify-evenly  lg:self-center xs:mt-5">
                 <Link
