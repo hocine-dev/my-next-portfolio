@@ -118,7 +118,7 @@ const projects = () => {
   return (
     <>
       <Head>
-        <title>Explore my impressive Projects</title>
+        <title>Explore my impressive Projects !</title>
         <meta
           name="description"
           content="Explore my impressive web developer portfolio  expert in HTML, CSS, JS, and responsive design. Hire me for your next project"
