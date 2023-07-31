@@ -9,9 +9,13 @@ import Link from "next/link";
 import HomeStyle from "../styles/Home.module.css";
 import TransitionEffect from "@/components/TransitionEffect";
 import BackToTop from "@/components/BackToTop";
+import detect from "detect.js";
 
 
 export default function Home() {
+  if (typeof window !== 'undefined') {
+  const ua = detect.parse(navigator.userAgent);
+  console.log(ua.os.family)}
   return (
     <>
       <Head>
