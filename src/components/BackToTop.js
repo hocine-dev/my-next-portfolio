@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import icon from "../../public/favicon.ico"
+import icon from "../../public/btop.ico"
 
 
 const isBrowser = () => typeof window !== 'undefined'; 
