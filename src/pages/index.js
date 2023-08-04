@@ -25,6 +25,7 @@ useEffect(()=>{(typeof window !== 'undefined') ?setIsMobile(window.navigator.use
           name="description"
           content="My Name Is Hocine Dev, I Am A Full Stack Web Developer With 5 Years Of Experience, With A Large Set Of Development Skills, I Can help you to Create Professional website"
         />
+            <meta name="google-site-verification" content="zwvBd7kHHWhKEObp6vwWEf3LhnqbmAYhPJq1U51B7Jo" />
       </Head>
 
       <TransitionEffect></TransitionEffect>
