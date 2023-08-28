@@ -56,7 +56,7 @@ useEffect(()=>{(typeof window !== 'undefined') ?setIsMobile(window.navigator.use
               </p>
               <div className="flex items-center  mt-2 w-full justify-evenly  lg:self-center xs:mt-5">
                 <Link
-                  href="/Hocine.pdf"
+                  href="/Hocine%20dev%20CV.pdf"
                   target="blank"
                   download={true}
                   className={`xs:!text-sm xs:px-1 hover:dark:border-light hover:dark:bg-dark hover:dark:text-light dark:bg-light dark:text-dark flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold
