@@ -9,17 +9,18 @@ import Link from "next/link";
 import HomeStyle from "../styles/Home.module.css";
 import TransitionEffect from "@/components/TransitionEffect";
 import BackToTop from "@/components/BackToTop";
-import { useState,useEffect } from "react";
-
+import { useState, useEffect } from "react";
 
 export default function Home() {
-  const [IsMobile,setIsMobile] = useState(false);
-
+  const [IsMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       // Check if userAgentData is available (for browsers like Chrome)
-      if (window.navigator.userAgentData && window.navigator.userAgentData.mobile) {
+      if (
+        window.navigator.userAgentData &&
+        window.navigator.userAgentData.mobile
+      ) {
         setIsMobile(window.navigator.userAgentData.mobile);
       } else {
         // Fallback to checking screen width for mobile detection
@@ -30,12 +31,15 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Hocine Dev | Full Stack Web Developer</title>
+        <title>Hocine HAMAMA | Full Stack Web Developer</title>
         <meta
           name="description"
-          content="My Name Is Hocine Dev, I Am A Full Stack Web Developer With 5 Years Of Experience, With A Large Set Of Development Skills, I Can help you to Create Professional website"
+          content="Hocine HAMAMA, développeur web Full Stack avec 7 ans d'expérience, vous aide à créer des sites web professionnels (vitrine, e-commerce, applications). Services sur mesure, SEO, design responsive, sécurité et performance. Contactez-moi pour un site clé en main."
         />
-            <meta name="google-site-verification" content="zwvBd7kHHWhKEObp6vwWEf3LhnqbmAYhPJq1U51B7Jo" />
+        <meta
+          name="google-site-verification"
+          content="zwvBd7kHHWhKEObp6vwWEf3LhnqbmAYhPJq1U51B7Jo"
+        />
       </Head>
 
       <TransitionEffect></TransitionEffect>
@@ -55,14 +59,15 @@ export default function Home() {
             </div>
             <div className="w-1/2 flex flex-col items-center self-center lg:min-w-[100vw] lg:text-center">
               <AnimatedText
-                text="Hello,My Name Is Hocine Dev"
+                text="Bonjour, je m'appelle Hocine HAMAMA"
                 className=" xs:!text-3xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl lg:p-1"
               />
 
               <p className="my-4 text-base font-medium !text-left xs:px-3">
-                I Am A Full Stack Web Developer<br></br>I Am Working As A
-                Freelancer<br></br>
-                Don&apos;t Hesitate To Contact Me If You Need Any Help.
+                Je suis développeur web Full Stack<br></br>Je travaille en tant
+                que freelance<br></br>
+                N&apos;hésitez pas à me contacter si vous avez besoin
+                d&apos;aide pour la creation de votre site web.
               </p>
               <div className="flex items-center  mt-2 w-full justify-evenly  lg:self-center xs:mt-5">
                 <Link
@@ -76,7 +81,11 @@ export default function Home() {
                   <span style={{ fontSize: 30, paddingLeft: 5 }}>&#8595;</span>
                 </Link>
                 <Link
-                  href={IsMobile?"https://wa.me/16145059642":"https://web.whatsapp.com/send?phone=16145059642"}
+                  href={
+                    IsMobile
+                      ? "https://wa.me/16145059642"
+                      : "https://web.whatsapp.com/send?phone=16145059642"
+                  }
                   target="blank"
                   className={`xs:!text-sm xs:px-1 hover:dark:border-light hover:dark:bg-dark hover:dark:text-light flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold
                   hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark`}
@@ -113,7 +122,7 @@ export default function Home() {
           <Image src={LightBulb} alt="light bulb "></Image>
         </div>
       </main>
-     <BackToTop/>
+      <BackToTop />
     </>
   );
 }
