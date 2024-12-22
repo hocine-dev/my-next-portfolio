@@ -15,8 +15,18 @@ import { useState,useEffect } from "react";
 export default function Home() {
   const [IsMobile,setIsMobile] = useState(false);
 
-useEffect(()=>{(typeof window !== 'undefined') ?setIsMobile(window.navigator.userAgentData
-  .mobile):null},[])
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // Check if userAgentData is available (for browsers like Chrome)
+      if (window.navigator.userAgentData && window.navigator.userAgentData.mobile) {
+        setIsMobile(window.navigator.userAgentData.mobile);
+      } else {
+        // Fallback to checking screen width for mobile detection
+        setIsMobile(window.innerWidth <= 768); // You can adjust the width as needed
+      }
+    }
+  }, []);
   return (
     <>
       <Head>
