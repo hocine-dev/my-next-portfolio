@@ -58,7 +58,7 @@ const About = () => {
                 Biography
               </h2>
               <p className="font-medium xs:px-5">
-                My Name Is Hocine Dev , I&apos;m 32 years old, I Am A Full Stack
+                My Name Is Hocine ,I Am A Full Stack
                 Web Developer With Over 6 Years Of Experience In Web Development
                 , With A Large Set Of Development Skills, I Can Help You To
                 Create A Professional Website That Allows You To Get Your Place
