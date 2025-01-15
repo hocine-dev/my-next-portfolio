@@ -47,58 +47,8 @@ const Navbar = () => {
       </button>
 
       <div className="w-full flex justify-between items-center">
-        <nav>
-          <a href="/" className="mr-4">
-            Home
-          </a>
-          <a href="/about" className="mr-4">
-            About
-          </a>
-          <a href="/projects" className="mr-4">
-            Projects
-          </a>
-          <a href="/blog" className="mr-4">
-            Blog
-          </a>
-        </nav>
-        <nav className="flex items-center justify-center flex-wrap">
-          <motion.a
-            href="https://github.com/hocine-dev"
-            target="_blank"
-            whileHover={{ y: -2 }}
-            className="w-6 m-5"
-            whileTap={{ scale: 0.9 }}
-          >
-            <Image src={githubIcon} alt="github" style={{ scale: "2.5" }} />
-          </motion.a>
-          <motion.a
-            href="https://www.linkedin.com/in/hocinedev/"
-            target="_blank"
-            whileHover={{ y: -2 }}
-            className="w-6 m-5"
-            whileTap={{ scale: 0.9 }}
-          >
-            <Image src={linkedinIcon} alt="linkedin" style={{ scale: "2.5" }} />
-          </motion.a>
-          <motion.a
-            href="https://bit.ly/46G9YNw"
-            target="_blank"
-            whileHover={{ y: -2 }}
-            className="w-6 m-5"
-            whileTap={{ scale: 0.9 }}
-          >
-            <Image src={fiverrIcon} alt="fiverr" style={{ scale: "2.5" }} />
-          </motion.a>
-          <motion.a
-            href="https://web.whatsapp.com/send?phone=16145059642"
-            target="_blank"
-            whileHover={{ y: -2 }}
-            className="w-6 m-3"
-            whileTap={{ scale: 0.9 }}
-          >
-            <Image src={whatsappIcon} alt="whatsapp" style={{ scale: "2.5" }} />
-          </motion.a>
-        </nav>
+       
+        
       </div>
     </header>
   );
