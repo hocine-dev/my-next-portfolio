@@ -1,42 +1,67 @@
+import Layout from "@/components/Layout";
 import Head from "next/head";
+import Image from "next/image";
+import mainImg from "../../public/images/home/mainimg.jpg";
+import circularImg from "../../public/images/home/circular.png";
+import LightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
+import AnimatedText from "@/components/AnimatedText";
+import Link from "next/link";
+import HomeStyle from "../styles/Home.module.css";
+import TransitionEffect from "@/components/TransitionEffect";
+import BackToTop from "@/components/BackToTop";
+import { useState, useEffect } from "react";
 
-export default function Maintenance() {
+export default function Home() {
+  const [IsMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
-    // Redirect after 5 seconds
-    const timer = setTimeout(() => {
-      window.location.href = "https://hocinehamama.vercel.app/";
-    }, 5000);
-    return () => clearTimeout(timer);
+    if (typeof window !== "undefined") {
+      // Check if userAgentData is available (for browsers like Chrome)
+      if (window.navigator.userAgentData && window.navigator.userAgentData.mobile) {
+        setIsMobile(window.navigator.userAgentData.mobile);
+      } else {
+        // Fallback to checking screen width for mobile detection
+        setIsMobile(window.innerWidth <= 768); // You can adjust the width as needed
+      }
+    }
   }, []);
 
   return (
     <>
       <Head>
-        <title>Maintenance | Hocine Dev</title>
+        <title>Maintenance Mode</title>
         <meta
           name="description"
-          content="This site is currently under maintenance. You will be redirected shortly."
+          content="The site is currently under maintenance. Please visit our main site for updates."
         />
+        <meta name="google-site-verification" content="zwvBd7kHHWhKEObp6vwWEf3LhnqbmAYhPJq1U51B7Jo" />
       </Head>
-      <main className="flex items-center justify-center min-h-screen bg-gray-100 text-center text-gray-800">
-        <div>
-          <h1 className="text-4xl font-bold mb-4">We'll be back soon!</h1>
-          <p className="text-lg mb-6">
-            Our website is currently undergoing maintenance. You will be
-            redirected to our portfolio page in a few moments.
+
+      <TransitionEffect></TransitionEffect>
+
+      <main className="flex items-center justify-center text-dark w-full min-h-screen xs:min-h-[90vh] dark:text-light lg:mt-3">
+        <Layout className="text-center">
+          <AnimatedText
+            text="We'll Be Back Soon!"
+            className="xs:!text-3xl !text-center xl:!text-5xl lg:!text-6xl md:!text-5xl sm:!text-3xl lg:p-1"
+          />
+
+          <p className="my-4 text-base font-medium">
+            The site is currently under maintenance. Please visit our main site by clicking the button below.
           </p>
-          <p className="text-sm text-gray-600">
-            If you are not redirected, please{" "}
-            <a
+          <div className="flex items-center justify-center mt-6">
+            <Link
               href="https://hocinehamama.vercel.app/"
-              className="text-blue-500 underline"
+              target="_blank"
+              className="hover:dark:border-light hover:dark:bg-dark hover:dark:text-light dark:bg-light dark:text-dark flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold
+                hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark"
             >
-              click here
-            </a>
-            .
-          </p>
-        </div>
+              Go to Main Site
+            </Link>
+          </div>
+        </Layout>
       </main>
+      <BackToTop />
     </>
   );
 }
