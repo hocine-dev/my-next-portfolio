@@ -13,7 +13,7 @@ const Navbar = () => {
   const router = useRouter();
   const [Mode, setMode] = useThemeSwitcher();
   const [IsOpen, setIsOpen] = useState(false);
-  const [disableNavBar, setDisableNavBar] = useState(false); // New state for disabling the navbar
+  const [disableNavBar, setDisableNavBar] = useState(true); // New state for disabling the navbar
 
   const handelClick = () => {
     setIsOpen(!IsOpen);
