@@ -42,7 +42,7 @@ export default function Home() {
       <main className="flex items-center justify-center text-dark w-full min-h-screen xs:min-h-[90vh] dark:text-light lg:mt-3">
         <Layout className="text-center">
           <AnimatedText
-            text="We'll Be Back Soon!"
+            text="We&apos;ll Be Back Soon!"
             className="xs:!text-3xl !text-center xl:!text-5xl lg:!text-6xl md:!text-5xl sm:!text-3xl lg:p-1"
           />
 
