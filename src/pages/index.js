@@ -36,7 +36,7 @@ export default function Home() {
         <Layout className="text-center">
           <AnimatedText
             // eslint-disable-next-line react/no-unescaped-entities
-            text="We'll Be Back Soon!"
+            text="We ll Be Back Soon!"
             className="xs:!text-3xl !text-center xl:!text-5xl lg:!text-6xl md:!text-5xl sm:!text-3xl lg:p-1"
           />
 
